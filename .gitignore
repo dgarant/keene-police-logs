@@ -1,4 +1,7 @@
 pdfs/
+badfiles.txt
+goodfiles.txt
 *.sqlite
 *.pyc
+txt/
 

@@ -52,7 +52,7 @@ def main():
     parser.add_argument("source", help="The file to read report information from in text format.")
     args = parser.parse_args()
 
-    engine = create_engine("postgresql+psycopg2:///keene_police").connect()
+    engine = create_engine("postgresql+psycopg2:///keene_police_logs").connect()
 
     with open(args.source, "r") as handle:
     

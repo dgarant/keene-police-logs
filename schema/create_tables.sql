@@ -33,7 +33,9 @@ create table incident
     longitude decimal(8, 6),
     jurisdiction varchar(100),
     aux_event_type varchar(100),
-    aux_event_key varchar(100)
+    aux_event_key varchar(100),
+    geocode_failed bit,
+    formatted_location varchar(500)
 );
 
 create table summons
