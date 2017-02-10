@@ -1,5 +1,5 @@
 # coding: utf-8
-from sqlalchemy import Column, Date, DateTime, ForeignKey, Integer, Numeric, String, text
+from sqlalchemy import Column, Date, DateTime, ForeignKey, Integer, Numeric, String, text, Boolean
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -40,7 +40,9 @@ class Incident(Base):
     outcome = Column(String(50))
     call_taker_id = Column(ForeignKey(u'dispatcher.id'))
     primary_officer_id = Column(ForeignKey(u'officer.id'))
+    geocode_failed = Column(Boolean)
     location = Column(String(300))
+    formatted_location = Column(String(1000))
     latitude = Column(Numeric(8, 6))
     longitude = Column(Numeric(8, 6))
     jurisdiction = Column(String(100))
